@@ -41,13 +41,23 @@ Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y, this.width, this.height); //add also width and height
 };
 
+// Place all enemy objects in an array called allEnemies
+var allEnemies = [   // Place all enemy objects in an array called allEnemies
+    new Enemy(-90, 60),
+    new Enemy(-190, 140),
+    new Enemy(-590, 230),
+    new Enemy(-390, 140),
+    new Enemy(-490, 160),
+    new Enemy(-690, 230)
+];
+
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
 
 
 // Now instantiate your objects.
-// Place all enemy objects in an array called allEnemies
+
 // Place the player object in a variable called player
 
 
