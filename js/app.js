@@ -55,6 +55,9 @@ var allEnemies = [   // Place all enemy objects in an array called allEnemies
 // This class requires an update(), render() and
 // a handleInput() method.
 
+Player.prototype.update = function(dt) {
+
+}
 
 // Now instantiate your objects.
 
