@@ -72,6 +72,30 @@ Player.prototype.reset = function() {   //reset function to move the player at s
     this.y = 450;
 };
 
+
+player.handleInput = function(keyPressed){
+
+    if (keyPressed === 'left'  && this.x > 0){
+        this.x -= 57;
+   }
+    if (keyPressed === 'up' && this.y > 0){
+        this.y -= 42.5;
+   }
+    if (keyPressed === 'right'  && this.x < 400){
+        this.x += 57;
+   }
+    if (keyPressed === 'down' && this.y < 435 ){
+        this.y += 42.5;
+   }
+
+     if (this.y < 0)    //if it touches the water
+
+        setTimeout(() => {
+            player.reset();
+        }, 700);  
+  };
+
+
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keyup', function(e) {
