@@ -63,6 +63,9 @@ Player.prototype.update = function(dt) {
 
 var player = new Player(); // Place the player object in a variable called player
 
+Player.prototype.render = function() {  //render method for drawing the player on the screen
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y, this.width, this.height);  //add also width and height
+};
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
