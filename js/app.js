@@ -55,6 +55,15 @@ var allEnemies = [   // Place all enemy objects in an array called allEnemies
 // This class requires an update(), render() and
 // a handleInput() method.
 
+var Player = function (x, y){
+    this.sprite = 'images/char-boy.png';
+    this.x = 200;
+    this.y = 450;
+    this.height = 121;
+    this.width = 101;
+
+}
+
 Player.prototype.update = function(dt) {
 
 }
