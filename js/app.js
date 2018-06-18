@@ -67,6 +67,11 @@ Player.prototype.render = function() {  //render method for drawing the player o
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y, this.width, this.height);  //add also width and height
 };
 
+Player.prototype.reset = function() {   //reset function to move the player at starting point
+    this.x = 200;
+    this.y = 450;
+};
+
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keyup', function(e) {
