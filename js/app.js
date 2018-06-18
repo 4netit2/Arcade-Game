@@ -61,8 +61,7 @@ Player.prototype.update = function(dt) {
 
 // Now instantiate your objects.
 
-// Place the player object in a variable called player
-
+var player = new Player(); // Place the player object in a variable called player
 
 
 // This listens for key presses and sends the keys to your
