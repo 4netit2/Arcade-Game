@@ -30,8 +30,8 @@ Enemy.prototype.update = function(dt) {  // Update the enemy's position, require
         this.x = -80;
      }
      
-	if (player.x < this.x + 60 && player.x + 80 > this.x &&
-	   player.y < this.y + 40 && player.y + 0 > this.y) {
+	if (player.x < this.x + 64 && player.x + 70 > this.x &&
+	   player.y < this.y + 65 && player.y + 30 > this.y) {
        
         alert('Collision');   //show an alert if  detect a collision 
 
@@ -56,8 +56,8 @@ var allEnemies = [ new Enemy(-90, 60), new Enemy(-190, 140), new Enemy(-590, 230
 var Player = function (x, y){
     this.sprite = 'images/char-boy.png';
     this.x = 200;
-    this.y = 450;
-    this.height = 121;
+    this.y = 420;
+    this.height = 141;
     this.width = 101;
 
 }
@@ -74,32 +74,34 @@ Player.prototype.render = function() {  //render method for drawing the player o
 
 Player.prototype.reset = function() {   //reset function to move the player at starting point
     this.x = 200;
-    this.y = 410;
+    this.y = 420;
 };
 
 player.handleInput = function(keyPressed){
 
-    if (keyPressed === 'left'  && this.x > 0){
-        this.x -= 54;
+    if (keyPressed === 'left'  && this.x > 40){
+        this.x -= 100;
     }
 
     if (keyPressed === 'right'  && this.x < 390){
-        this.x += 54;
+        this.x += 100;
 
     }
-    if (keyPressed === 'up' && this.y > 0){
-        this.y -= 42.5;
+    if (keyPressed === 'up' && this.y > 40){
+        this.y -= 85;
 
     }
-    if (keyPressed === 'down' && this.y < 435 ){
-        this.y += 24.5;
+    if (keyPressed === 'down' && this.y < 405 ){
+        this.y += 85;
     }
 
     if (this.y < 0)    //if it touches the water
-
+    
         setTimeout(() => {
+                        
             player.reset();
-        }, 700);  
+            
+        }, 500);  
   };
 
 
